@@ -1,5 +1,7 @@
 extends Node
 tool
+signal export_done
+signal export_failed
 export (String) var file_name
 export (String, DIR, GLOBAL) var texture_path
 export (bool) var create_file
@@ -8,11 +10,11 @@ var generating = false
 func _ready():
 	pass # Replace with function body.
 
-func _process(delta):
+func _physics_process(delta):
 	if create_file and !generating:
 		generating = true
 		generate_texture_pck(file_name, texture_path)
-		create_file = false
+		
 
 
 
@@ -25,12 +27,14 @@ func generate_texture_pck(file_name:String, target_dir=texture_path):
 	packer.pck_start("exports/"+file_name)
 	files = search_dir(target_dir)
 	if files == []:
+		print("Couldn't find any files, for some reason?")
+		emit_signal("export_failed")
 		return
 	var pck_target = "res://"+target_dir.right(target_dir.find("textures"))
 	var output = []
+	
 	for i in files:
 		if target_dir in i:
-
 			print(i)
 			print(i.get_file())
 			if ".import" in i.get_file():
@@ -41,7 +45,6 @@ func generate_texture_pck(file_name:String, target_dir=texture_path):
 					print("adding import file: ", dest)
 					packer.add_file(dest, dest)
 					output.append(dest)
-			#var dest = target_dir.plus_file(i.right(i.find(target_dir)))
 			var dest = pck_target+"/"+i.get_file()
 			print(dest)
 			packer.add_file(dest, i)
@@ -50,8 +53,11 @@ func generate_texture_pck(file_name:String, target_dir=texture_path):
 			print("dest: ",dest, " source file: ", i)
 	packer.flush(true)
 	print("outputted to: ", output)
+	emit_signal("export_done")
+	return
+	
 func search_dir(path):
-	print("Searching")
+	print("Searching for files in path: ", path)
 	var dir = Directory.new()
 	var files = []
 	if dir.open(path) == OK:
@@ -73,8 +79,8 @@ func search_dir(path):
 	else:
 		print("Couldn't open directory, doesn't exist")
 		push_error("Couldn't open directory, doesn't exist")
+		emit_signal("export_failed")
 		return
-	#print("textureimport search dir found: ", pcks)
 	return files
 
 func locate_import(search_file): #for finding file in .import/ that matches cur file
@@ -94,3 +100,13 @@ func locate_import(search_file): #for finding file in .import/ that matches cur 
 	else:
 		return
 	return files
+
+
+func _on_exporter_export_done():
+	print("Export success!")
+	create_file = false
+
+
+func _on_exporter_export_failed():
+	print("Export failed!!")
+	create_file = false

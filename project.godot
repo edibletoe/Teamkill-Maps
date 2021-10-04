@@ -206,8 +206,14 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Teamkill Map Editor"
+config/name="Teamkill Map Tools"
+config/description="(Currently just a texture import & exporting tool)"
+run/main_scene="res://exporter.tscn"
 config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/qodot/plugin.cfg" )
 
 [physics]
 

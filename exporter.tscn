@@ -4,5 +4,13 @@
 
 [node name="exporter" type="Node"]
 script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "Select your texture folder, and choose a file name for your exported file
+
+Should output to \"exports\" folder, stick this in \"textures\" in Teamkill, alongside your .map file from Trenchbroom, and with some luck things should load."
+}
 file_name = "custom_texture_example"
-texture_path = "F:/Workspace/Game Projects/Godot/Projects/ACTIVE/MAIN PROJECTS/Teamkill Map Editor/textures/custom_example"
+texture_path = "F:/Workspace/Game Projects/Godot/Projects/ACTIVE/MAIN PROJECTS/Teamkill-Maps/textures/custom_example"
+
+[connection signal="export_done" from="." to="." method="_on_exporter_export_done"]
+[connection signal="export_failed" from="." to="." method="_on_exporter_export_failed"]

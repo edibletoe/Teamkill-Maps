@@ -1,5 +1,5 @@
 # Teamkill-Maps
-Mapping project file to assist in making maps for Teamkill
+Mapping project & template for making Teamkill maps
 ------
 TK Mapping tools! - Now slightly less janky!
 

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_point_class.gd" type="Script" id=1]
+[ext_resource path="res://Objects/Mapobjects/Spawnpoint.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Mapobjects/Spawnpoint.gd" type="Script" id=3]
+
+[resource]
+script = ExtResource( 1 )
+class_options = "----------------------------------------------------------------"
+classname = "Player"
+description = "Player spawn point for Teamkill"
+qodot_internal = false
+base_classes = [  ]
+class_properties = {
+"rotation": Vector3( 0, 0, 0 )
+}
+class_property_descriptions = {
+"rotation": "Vector3 local rotation to use in Godot"
+}
+meta_properties = {
+}
+node_options = "----------------------------------------------------------------"
+node_class = ""
+transient_node = false
+scene = "----------------------------------------------------------------"
+scene_file = ExtResource( 2 )
+scripting = "----------------------------------------------------------------"
+script_class = ExtResource( 3 )

@@ -34,7 +34,7 @@ Entity info:
 ------
 
 # PROJECT INFO:
-All game textures go in the "textures" folder, ideally in a subfolder, currently included are all the textures currently in the game, alongside an example of a custom texture pack
+All game textures go in the "textures" folder, ideally in a subfolder. All the game's textures are included, alongside an example of a custom texture pack
 
 I also have a very janky and hastily put together tool to help you get your custom textures into the game, in form of the "exporter" tool in the Godot project!
 

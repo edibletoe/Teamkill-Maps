@@ -5,7 +5,7 @@ signal export_failed
 export (String) var file_name
 export (String, DIR, GLOBAL) var texture_path
 export (bool) var create_file
-var file_formats = ["png","bmp","jpg", "import"] #add more if you need em
+var file_formats = ["png","bmp","jpg", "import", "tres"] #add more if you need em
 var generating = false
 func _ready():
 	pass # Replace with function body.

@@ -19,6 +19,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/qodot/game_definitions/worldspawn_layers/liquid.gd"
 }, {
+"base": "Node",
+"class": "MapFinder",
+"language": "GDScript",
+"path": "res://Dummy_Files/MapFinder.gd"
+}, {
+"base": "Spatial",
+"class": "MapScene",
+"language": "GDScript",
+"path": "res://Scripts/Maps/MapBACKUP.gd"
+}, {
 "base": "Spatial",
 "class": "OrbitArm",
 "language": "GDScript",
@@ -33,6 +43,11 @@ _global_script_classes=[ {
 "class": "PhysicsEntity",
 "language": "GDScript",
 "path": "res://addons/qodot/game_definitions/fgd/solid_classes/physics.gd"
+}, {
+"base": "Node",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Dummy_Files/Player.gd"
 }, {
 "base": "Reference",
 "class": "QodotDependencies",
@@ -144,6 +159,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/qodot/game_definitions/worldspawn_layers/liquid/slime.gd"
 }, {
+"base": "Position3D",
+"class": "SpawnPoint",
+"language": "GDScript",
+"path": "res://Objects/Mapobjects/Spawnpoint.gd"
+}, {
 "base": "Resource",
 "class": "TrenchBroomFaceAttrib",
 "language": "GDScript",
@@ -172,9 +192,12 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "LavaLayer": "",
 "LiquidLayer": "",
+"MapFinder": "",
+"MapScene": "",
 "OrbitArm": "",
 "PhysicsBall": "",
 "PhysicsEntity": "",
+"Player": "",
 "QodotDependencies": "",
 "QodotEntity": "",
 "QodotFGDBaseClass": "",
@@ -197,6 +220,7 @@ _global_script_class_icons={
 "QuakeWadFile": "",
 "QuakeWadImportPlugin": "",
 "SlimeLayer": "",
+"SpawnPoint": "",
 "TrenchBroomFaceAttrib": "",
 "TrenchBroomGameConfigFile": "",
 "TrenchBroomGameConfigFolder": "",

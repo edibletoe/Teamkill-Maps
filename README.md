@@ -3,9 +3,9 @@ Mapping project & template for making Teamkill maps
 ------
 TK Mapping tools! - Now slightly less janky!
 
-In this package, you should find a Godot project (made with Godot 3.3.4 in mind)
+In this package, you should find a Godot project (made with Godot 3.4 in mind)
 
-To use it, you'll need to download Godot, which you can get here. It's currently running on 3.3.4, but it shouldn't be too important if you have a recent version.
+To use it, you'll need to download Godot, which you can get here. It's currently running on 3.4, but it shouldn't be too important if you have a recent version.
 https://godotengine.org/download/windows
 
 You might also want to pick up a mapping tool that can make Quake maps, like Trenchbroom: https://trenchbroom.github.io

@@ -27,7 +27,7 @@ _global_script_classes=[ {
 "base": "Spatial",
 "class": "MapScene",
 "language": "GDScript",
-"path": "res://Scripts/Maps/MapBACKUP.gd"
+"path": "res://Scripts/Maps/Map.gd"
 }, {
 "base": "Spatial",
 "class": "OrbitArm",

@@ -10,6 +10,8 @@ https://godotengine.org/download/windows
 
 You might also want to pick up a mapping tool that can make Quake maps, like Trenchbroom: https://trenchbroom.github.io
 
+To get your map ready for Teamkill, export your map .tscn file and its required resources as a .pck file using the built-in Export function (Remind me to update these guidelines)
+
 If you're new to Godot Engine, the documentation is pretty solid! https://docs.godotengine.org/en/stable/index.html
 They've also compiled a list of tutorials & resources/tools/etc to help you get into the swing of it https://docs.godotengine.org/en/stable/community/tutorials.html
 
@@ -32,19 +34,3 @@ Entity info:
 
 
 ------
-
-# PROJECT INFO:
-All game textures go in the "textures" folder, ideally in a subfolder. All the game's textures are included, alongside an example of a custom texture pack
-
-I also have a very janky and hastily put together tool to help you get your custom textures into the game, in form of the "exporter" tool in the Godot project!
-
-To use it:
-
-If not already opened, double-click "exporter.tscn" in your FileSystem view (but it should happen by default), then click on the "exporter" node in the Scene view
-On the Inspector view on the right, you'll have a few options:
-
-File Name - give your exported file a name
-Texture Path - Select the folder you used for your custom textures
-Create File (on/off button) - clicking this should start the packing, but this is currently a bit jank. If the checkmark stays on forever or the output  console at the bottom seemingly does nothing, close the exporter.tscn scene and reopen it, and it should eventually behave. --  It'll be improved soon enough :)
-
-Exported files can be found in "exports" folder, and you should be able to plop this .pck file right into your "textures" folder in Teamkill, alongside your .map file you've made in Trenchbroom (into "maps")

@@ -5,7 +5,9 @@
 [node name="exporter" type="Node"]
 script = ExtResource( 1 )
 __meta__ = {
-"_editor_description_": "Select your texture folder, and choose a file name for your exported file
+"_editor_description_": "----DEPRECATED, PLEASE USE GODOT'S BUILTIN EXPORT FEATURE :)----
+
+Select your texture folder, and choose a file name for your exported file
 
 Should output to \"exports\" folder, stick this in \"textures\" in Teamkill, alongside your .map file from Trenchbroom, and with some luck things should load."
 }

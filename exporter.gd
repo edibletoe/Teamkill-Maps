@@ -1,4 +1,4 @@
-extends Node
+extends Node #OLD TOOL, I WOULD RECOMMEND USING GODOT'S BUILT-IN EXPORT FEATURE INSTEAD :)
 tool
 signal export_done
 signal export_failed

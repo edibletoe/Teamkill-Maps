@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Objects/Mapobjects/Teleporter.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 5.80057, 0.680764, 5.67877 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.945098, 0, 1, 1 )
+
+[sub_resource type="CubeMesh" id=5]
+material = SubResource( 4 )
+size = Vector3( 12, 0.25, 12 )
+
+[node name="Teleporter" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Area" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.598426, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="Cooldown" type="Timer" parent="."]
+process_mode = 0
+one_shot = true
+
+[node name="LaunchSound" type="AudioStreamPlayer3D" parent="."]
+unit_size = 40.0
+max_db = -1.0
+pitch_scale = 0.69
+
+[node name="Destination" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0 )
+
+[connection signal="tele_queue_updated" from="." to="." method="_on_Teleporter_tele_queue_updated"]
+[connection signal="tele_ready" from="." to="." method="_on_Teleporter_tele_ready"]
+[connection signal="teleported" from="." to="." method="_on_Teleporter_teleported"]
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_LaunchCooldown_timeout"]

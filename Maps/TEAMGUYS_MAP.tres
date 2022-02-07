@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Maps/MapResource.gd" type="Script" id=1]
+[ext_resource path="res://Maps/TESTMAPS/AwzomEpicMap.tscn" type="PackedScene" id=2]
+
+[resource]
+script = ExtResource( 1 )
+map_name = "TEAMGUYS RLY C00L M4P"
+map_author = "TEMAGUY"
+max_players = 2
+map_scene = ExtResource( 2 )

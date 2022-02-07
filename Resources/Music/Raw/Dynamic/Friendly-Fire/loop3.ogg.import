@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/loop3.ogg-a4d2850ae4466cd0b994bf2a825b1ce0.oggstr"
+
+[deps]
+
+source_file="res://Resources/Music/Raw/Dynamic/Friendly-Fire/loop3.ogg"
+dest_files=[ "res://.import/loop3.ogg-a4d2850ae4466cd0b994bf2a825b1ce0.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

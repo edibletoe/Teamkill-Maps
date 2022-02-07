@@ -24,6 +24,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Dummy_Files/MapFinder.gd"
 }, {
+"base": "Resource",
+"class": "MapResource",
+"language": "GDScript",
+"path": "res://Scripts/Maps/MapResource.gd"
+}, {
 "base": "Spatial",
 "class": "MapScene",
 "language": "GDScript",
@@ -32,7 +37,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "MusicPack",
 "language": "GDScript",
-"path": "res://Resources/Music/MusicPacks/Template/MusicPack.gd"
+"path": "res://Scripts/Music/MusicPack.gd"
 }, {
 "base": "Spatial",
 "class": "OrbitArm",
@@ -198,6 +203,7 @@ _global_script_class_icons={
 "LavaLayer": "",
 "LiquidLayer": "",
 "MapFinder": "",
+"MapResource": "",
 "MapScene": "",
 "MusicPack": "",
 "OrbitArm": "",
@@ -236,9 +242,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Teamkill Map Tools"
-config/description="(Currently just a texture import & exporting tool)"
-run/main_scene="res://exporter.tscn"
+config/name="Teamkill Modkit"
+config/description="Maps & Music Packs kit"
+run/main_scene="res://TOOLS/MusicPreview.tscn"
 config/icon="res://icon.png"
 
 [autoload]

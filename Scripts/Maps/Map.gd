@@ -16,6 +16,7 @@ export (String) var custom_hide_and_seek_music_track = "" #if a specific track f
 export (bool) var use_dynamic_surfaces = false
 export (bool) var use_dynamic_sky = false
 export (bool) var match_dynamic_sky_to_surface = false
+export (Array, NodePath) var map_meshes
 export (Dictionary) var dynamic_surfaces = {"Ground":0,"Walls":1}
 export (NodePath) var map_mesh
 export var ground_color = Color()
@@ -24,10 +25,12 @@ export var sky_color = Color()
 
 
 func _ready():	
-	if !map_mesh is Mesh: #disable dynamic surface stuff if invalid mesh given
-		map_mesh = null
-		use_dynamic_surfaces = false
-		match_dynamic_sky_to_surface = false
+	for map_mesh in map_meshes:
+			if !get_node(map_mesh) is MeshInstance: #disable dynamic surface stuff if invalid mesh given
+				map_mesh = null
+				use_dynamic_surfaces = false
+				match_dynamic_sky_to_surface = false
+				break
 		
 	if self.has_node("WorldEnvironment"):
 		world_environment = get_node("WorldEnvironment")
@@ -42,15 +45,20 @@ func _physics_process(delta):
 
 func set_dynamic_texture_colors():
 	#todo: make a separate "wall surfaces" array and iterate through all of them
-	var mesh:MeshInstance
-	var mat:SpatialMaterial
-	mat = mesh.get_active_material(dynamic_surfaces["Ground"]) #this is dirty do not keep this
-	mat.emission = ground_color
-	mat.next_pass.emission = ground_color
-	mat = mesh.get_active_material(dynamic_surfaces["Walls"])
-	mat.emission = wall_color
+	for i in map_meshes:
+		if get_node(i) is MeshInstance:
+			var mesh:MeshInstance = get_node(i)
+			var mat:SpatialMaterial
+			#if qodot_map:
+				#mesh = environment.get_node("entity_0_worldspawn/entity_0_mesh_instance")
+			mat = mesh.get_active_material(dynamic_surfaces["Ground"]) #this is dirty do not keep this
+			mat.emission = ground_color
+			mat.next_pass.emission = ground_color
+			mat = mesh.get_active_material(dynamic_surfaces["Walls"])
+			mat.emission = wall_color
+			mat.next_pass.emission = wall_color
+			#mat.next_pass.emission = ground_color
 
-	
 func set_sky_colors():
 	if world_environment != null and world_environment.environment.background_sky != null:
 		var sky = world_environment.environment.background_sky

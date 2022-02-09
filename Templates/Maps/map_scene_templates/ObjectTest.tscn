@@ -1,9 +1,8 @@
-[gd_scene load_steps=118 format=2]
+[gd_scene load_steps=117 format=2]
 
 [ext_resource path="res://Scripts/Maps/Map.gd" type="Script" id=1]
 [ext_resource path="res://addons/qodot/src/nodes/qodot_map.gd" type="Script" id=2]
 [ext_resource path="res://addons/qodot/game_definitions/fgd/teamkill_fgd.tres" type="Resource" id=3]
-[ext_resource path="res://Objects/Mapobjects/Spawnpoint.gd" type="Script" id=4]
 [ext_resource path="res://addons/qodot/game_definitions/fgd/point_classes/light.gd" type="Script" id=5]
 [ext_resource path="res://Objects/Mapobjects/Teleporter.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Objects/Mapobjects/Spawnpoint.tscn" type="PackedScene" id=7]
@@ -770,9 +769,8 @@ omni_range = 16.0
 
 [node name="SpawnPoints" type="Spatial" parent="."]
 
-[node name="entity_5_Player" type="Position3D" parent="SpawnPoints" instance=ExtResource( 7 )]
+[node name="entity_5_Player" parent="SpawnPoints" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8251, 1.53328, -0.5 )
-script = ExtResource( 4 )
 
 [node name="Pickups" type="Spatial" parent="."]
 

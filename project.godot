@@ -164,6 +164,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/qodot/src/import_plugins/quake_wad_import_plugin.gd"
 }, {
+"base": "Area",
+"class": "RespawnArea",
+"language": "GDScript",
+"path": "res://Objects/Mapobjects/RespawnArea.gd"
+}, {
 "base": "LiquidLayer",
 "class": "SlimeLayer",
 "language": "GDScript",
@@ -231,6 +236,7 @@ _global_script_class_icons={
 "QuakePaletteImportPlugin": "",
 "QuakeWadFile": "",
 "QuakeWadImportPlugin": "",
+"RespawnArea": "",
 "SlimeLayer": "",
 "SpawnPoint": "",
 "TrenchBroomFaceAttrib": "",

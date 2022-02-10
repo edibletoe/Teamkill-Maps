@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Maps/MapResource.gd" type="Script" id=1]
+[ext_resource path="res://Maps/Skylines/SkylinesVR.tscn" type="PackedScene" id=2]
+
+[resource]
+script = ExtResource( 1 )
+map_name = "Skylines VR"
+map_author = "Niko"
+max_players = 10
+map_scene = ExtResource( 2 )

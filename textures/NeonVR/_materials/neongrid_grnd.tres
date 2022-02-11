@@ -1,0 +1,18 @@
+[gd_resource type="SpatialMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://textures/NeonVR/_materials/GridTextTest128x128_emmission1.png" type="Texture" id=1]
+[ext_resource path="res://textures/NeonVR/_materials/GridTextTest128x128.png" type="Texture" id=2]
+
+[resource]
+flags_ensure_correct_normals = true
+albedo_color = Color( 0, 0, 0, 1 )
+albedo_texture = ExtResource( 2 )
+emission_enabled = true
+emission = Color( 1, 1, 1, 1 )
+emission_energy = 1.0
+emission_operator = 1
+emission_on_uv2 = true
+emission_texture = ExtResource( 1 )
+uv1_triplanar = true
+uv2_scale = Vector3( 0.5, 0.5, 0.5 )
+uv2_triplanar = true

@@ -2,7 +2,7 @@
 
 Godot Project file including templates and assets needed to import maps & music into Teamkill
 ------
-In this package, you should find a Godot (3.4.2) project, bundled together with the amazing addon [Qodot](https://github.com/QodotPlugin/qodot-plugin) (an addon that allows for importing Quake .map files)
+In this package, you should find a Godot (3.4.2) project, bundled together with the amazing addon [Qodot](https://github.com/QodotPlugin/qodot-plugin) (an addon that allows for importing Quake .map files) Download the source code from repo/releases and optionally the included Trenchbroom config file
 
 To use it, you'll need to download Godot, which you can get here. It's currently running on 3.4.2, but it shouldn't be too important if you have a recent version.
 https://godotengine.org/download/windows
